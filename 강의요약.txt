@@ -1,0 +1,6 @@
+1. Create Menu Resource folder describing (bottom) navigation view
+a)Res folder >And Res Directory>Resource type: menu
+b)menu folder: create resource file: bottom_nav_menu
+- text 로 가서: 
+
+2. drawable >image asset> 
