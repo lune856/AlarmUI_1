@@ -3,20 +3,25 @@ package com.jjongflickerman.alarmui1
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
+// Version 0.00 : 기본 activity 이동 기능만 구현
+// Version 0.01 : Fragment 1에서 RecycleView 구동! 참고:  https://medium.com/inside-ppl-b7/recyclerview-inside-fragment-with-android-studio-680cbed59d84
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+//************ Fragments *************
         //instance of our fragments
         val firstFragment = FirstFragmentClass()
         val secondFragment = SecondFragmentClass()
         val thirdFragment = ThirdFragmentClass()
 
-        //set the initial frgament when we open the app
+        //set the initial fragment when we open the app
         setCurrentFragment(firstFragment)
 
         // id_bottomNavigationView inside activity_main.xml
@@ -39,7 +44,12 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+
+
+
     }
+
+
 
     // replace our current fragment with a new one.
     private fun setCurrentFragment(receivedFragment: Fragment) =
