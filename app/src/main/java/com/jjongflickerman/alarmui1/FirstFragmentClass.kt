@@ -38,9 +38,11 @@ class FirstFragmentClass : Fragment() // for the constructor, we need to pass th
         {
             val imgResource = when(i%3)
             {
-                0 -> R.drawable.thumbnail_bike
-                1 -> R.drawable.thumbnail_bus
-                else -> R.drawable.thumbnail_camera
+                0 -> R.drawable.airplane
+                1 -> R.drawable.rainforest
+                2 -> R.drawable.starbucks
+
+                else -> R.drawable.temple
             }
             val singleDataClassInstance = MyDataClassItem(imgResource, "Item $i","text 2 yo!" )
             listOfMyDataClassItem += singleDataClassInstance
